@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+ background-image: url('https://r4.wallpaperflare.com/wallpaper/871/418/390/city-cityscape-dubai-united-arab-emirates-wallpaper-4950886d01fafd6b36e7386f80b1861d.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+
+/*navbar*/
+
+
+
+.logo {
+  font-size: 24px;
+  color: white;
+}
+
+ul {
+  margin: 0;
+  /* Remova a margem superior para alinhar corretamente a barra de navegação */
+  padding: 10px 0;
+  /* Adicione padding acima e abaixo para espaçamento interno */
+  list-style: none;
+  list-style: none;
+  margin-left: 297px;
+  margin-top: -57px;
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+
+li {
+  display: table-cell;
+  position: relative;
+  padding: 0 10px; /* Adicione padding horizontal para espaçamento entre os itens */
+}
+
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}
+
+/*login*/
+
+.login-btn {
+  padding: 10px 20px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #f0c400;
+}
+
+.hero {
+
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.room-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/*rooms*/
+.room-box {
+  width: calc(33.33% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.room-box img {
+  width: 100%;
+  height: auto;
+}
+
+.room-info {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.726);
+  color: #fff;
+}
+
+.room-info h2 {
+  margin-top: 0;
+}
+
+.room-info p {
+  margin-bottom: 10px;
+}
+
+.room-info strong {
+  font-weight: bold;
+}
+
+
+.Btn {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+.svgIcon {
+  width: 16px;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.Btn::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.Btn:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.Btn:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
+}
+/*check-in and check-out*/
+.booking-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.267); /* Adicionando efeito de vidro */
+  backdrop-filter: blur(10px); /* Adicionando efeito de vidro */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.booking-bar input[type="date"],
+.booking-bar select {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.booking-bar .dates {
+  display: flex;
+}
+
+.booking-bar #guests-rooms {
+  flex-grow: 1;
+}
+
+.booking-bar input[type="submit"] {
+  background-color: #f0c400;;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-bar input[type="submit"]:hover {
+  background-color: #f0c400;
+}
+ /* Estilos para o formulário de pagamento */
+ .paymentForm {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.534);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+.paymentForm.show {
+  display: block;
+}
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+/* Estilos para o botão "alugar" */
+.Btn {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+.svgIcon {
+  width: 16px;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.Btn::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.Btn:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.Btn:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
+}
+
+
